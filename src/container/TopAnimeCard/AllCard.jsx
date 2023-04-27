@@ -3,6 +3,7 @@ import { useGetAllAnimeQuery } from "../../redux/animeApi";
 import { Error, Loader } from "../../components";
 import {AnimeCard} from "../../components";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 
 const AllCard = () => {
@@ -27,9 +28,9 @@ const AllCard = () => {
           </button>
         </div>
         <div
-        className="flex flex-row flex-wrap gap-5 justify-between rounded ">
+        className="flex flex-row flex-wrap gap-5 justify-center sm:justify-between  ">
           {AllAnime?.map((anime) => (
-           <AnimeCard anime={anime}  key={anime.myanimelist_id} />         
+           <AnimeCard anime={anime}  key={anime.myanimelist_id}/>         
           ))}
         </div>
       </div>

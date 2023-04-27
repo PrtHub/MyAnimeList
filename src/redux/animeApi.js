@@ -1,11 +1,13 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
+const API_KEY = import.meta.env.VITE_REACT_API_KEY
+
 export const animeApi = createApi({
     reducerPath: 'animeApi',
     baseQuery: fetchBaseQuery({
       baseUrl: 'https://myanimelist.p.rapidapi.com',
       prepareHeaders: (headers) => {
-        headers.set('X-RapidAPI-Key', 'f826710696mshb67fd82e3ecf232p139c13jsn7acf56ce7d55');
+        headers.set('X-RapidAPI-Key', API_KEY );
         return headers;
       },
     }),

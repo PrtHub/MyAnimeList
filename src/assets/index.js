@@ -7,6 +7,7 @@ import JJKS from './JJKS.jpg';
 import Musho from './Musho.jpg';
 import OP from './onepiece.webp';
 import Vinland from './Vinland.png';
+import spinner from './Spinner.svg'
 
 
 export {
@@ -18,5 +19,6 @@ export {
     JJKS,
     Musho,
     OP,
-    Vinland
+    Vinland,
+    spinner
 }

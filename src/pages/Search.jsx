@@ -14,7 +14,7 @@ const Search = () => {
 
   return (
     <>
-    <div className='flex flex-col'>
+    <div className='flex flex-col mx-5'>
     <h2 className="font-bold text-3xl text-white text-left mt-4 mb-10">
         Showing results for <span className="text-[#563bfa]">{searchTerm}</span>
       </h2>

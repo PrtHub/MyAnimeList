@@ -17,8 +17,8 @@ const Footer = () => {
 
   return (
     <>
-      <div className="mt-20 flex flex-wrap flex-1 justify-between items-center px-6 py-10  border-t-[1px] border-[#563bfa]  ">
-        <div className="flex flex-col items-start gap-4">
+      <div className="mt-20 flex flex-1 flex-col sm:flex-row gap-10 sm:gap-0  justify-center sm:justify-between items-center px-6 py-10  border-t-[1px] border-[#563bfa]  ">
+        <div className="flex flex-col items-center sm:items-start gap-4">
           <div className="flex items-center gap-4  ">
             <ImYoutube className="w-5 h-5 text-[#563bfa] hover:text-white cursor-pointer" />
             <AiOutlineTwitter className="w-5 h-5 text-[#563bfa] hover:text-white cursor-pointer" />
@@ -34,19 +34,6 @@ const Footer = () => {
             </Link>
           </h1>
         </div>
-        <div className="flex flex-col gap-4 text-white ">
-          <div className="flex justify-around ">
-            <Link to="/" className="hover:text-[#563bfa]">
-              Anime
-            </Link>
-            <Link to="/manga" className="hover:text-[#563bfa]">
-              Manga
-            </Link>
-          </div>
-          <div>
-            <p>2023&copy; All Right Reserved</p>
-          </div>
-        </div>
         <div>
           <form onSubmit={handleSubmit}>
           <input
@@ -59,6 +46,19 @@ const Footer = () => {
             className="w-[250px]  bg-[#563bfa] border-none outline-none text-base text-white px-3 py-2 rounded "
           />
           </form>
+        </div>
+        <div className="flex flex-col gap-4 text-white ">
+          <div className="flex justify-around ">
+            <Link to="/" className="hover:text-[#563bfa]">
+              Anime
+            </Link>
+            <Link to="/manga" className="hover:text-[#563bfa]">
+              Manga
+            </Link>
+          </div>
+          <div>
+            <p>2023&copy; All Right Reserved</p>
+          </div>
         </div>
       </div>
     </>

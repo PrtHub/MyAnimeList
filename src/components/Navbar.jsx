@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex-1 flex flex-row justify-between items-center  text-white px-6 py-4">
+      <nav className="flex-1 flex flex-row justify-between items-center  text-white px-6 py-4 ">
         <div className="menu relative">
           <div className="menu-button">
             {menu ? (

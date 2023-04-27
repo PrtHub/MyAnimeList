@@ -13,7 +13,7 @@ const MostFavorite = () => {
   return (
     <>
      <div className="w-full mt-10 text flex flex-col items-start gap-5 px-6 ">
-        <div className=" w-full flex items-center justify-between ">
+        <div className=" w-full text-center sm:text-start ">
           <h1 className="text-white text-lg sm:text-3xl font-semibold">Most Favorite Anime</h1>
         </div>
         <div

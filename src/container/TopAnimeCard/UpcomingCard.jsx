@@ -25,7 +25,7 @@ const UpcomingCard = () => {
           </button>
         </div>
         <div
-        className="flex flex-row flex-wrap gap-5 justify-between rounded ">
+        className="flex flex-row flex-wrap gap-5 justify-center sm:justify-between rounded ">
           {UpAnime?.map((anime) => (
            <AnimeCard anime={anime}  key={anime.myanimelist_id} />         
           ))}
