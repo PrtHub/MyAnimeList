@@ -6,10 +6,8 @@ import { motion } from "framer-motion";
 
 const AnimeCard = ({ anime }) => {
   return (
-    <div
-      className="relative flex flex-row text-white cursor-pointer box-shadow sidebar"
-    >
-      <img src={anime.picture_url} alt="" className="w-[150px] h-[172px]" />
+   <motion.div whileHover={{ scale: 1.1 }} className="w-[150px] h-[172px] relative bg-gradient-to-r from-blue-400 to-indigo-500 flex flex-row text-white cursor-pointer box-shadow ">
+      <img src={anime.picture_url} alt="" className="w-full h-full" />
       <div className="absolute top-0 left-0 ">
         <p className="bg-[#563bfa] px-2 py-0 text-lg font-medium">
           {anime.rank}
@@ -34,8 +32,7 @@ const AnimeCard = ({ anime }) => {
           <p> {parseInt(anime.members).toLocaleString()} </p>
         </div>
       </Link>
-      
-    </div>
+   </motion.div>
   );
 };
 

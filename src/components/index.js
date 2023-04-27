@@ -5,6 +5,7 @@ import Loader from "./Loader";
 import Error from "./Error";
 import AnimeCard from "./AnimeCard";
 import Footer from "./Footer";
+import SearchCard from "./SearchCard";
 
 export {
     Navbar,
@@ -13,5 +14,6 @@ export {
     Loader,
     Error,
     AnimeCard,
-    Footer
+    Footer,
+    SearchCard
 }

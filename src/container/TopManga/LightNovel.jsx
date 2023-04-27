@@ -1,12 +1,11 @@
 import React from "react";
-import { useGetAllMangaQuery } from "../../redux/animeApi";
+import { useGetLightNovelQuery } from "../../redux/animeApi";
 import { Error, Loader } from "../../components";
 import {AnimeCard} from "../../components";
 
 
-
-const AllMangas = () => {
-  const { data, isFetching, error } = useGetAllMangaQuery();
+const LightNovel = () => {
+  const { data, isFetching, error } = useGetLightNovelQuery();
 
   if (isFetching) return <Loader title="Loading Songs..." />;
 
@@ -15,8 +14,8 @@ const AllMangas = () => {
   return (
     <>
       <div className="w-full mt-10 text flex flex-col items-start gap-5 px-6 relative ">
-        <div className=" w-full text-center sm:text-start ">
-          <h1 className="text-white text-lg sm:text-3xl font-semibold">Top Manga</h1>
+        <div className=" w-full flex items-center justify-between ">
+          <h1 className="text-white text-lg sm:text-3xl font-semibold">Light Novel</h1>
         </div>
         <div
         className="flex flex-row flex-wrap gap-5 justify-center sm:justify-between  ">
@@ -29,5 +28,4 @@ const AllMangas = () => {
   );
 };
 
-
-export default AllMangas
+export default LightNovel;

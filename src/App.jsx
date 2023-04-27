@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import { Anime, Manga, Search } from './pages'
 import { AiringAnime, AllAnime, MostFavorite, MostPopular, Movies,UpcomingAnime } from './container/TopAnime'
 
-import {AllMangas,  MostFavoriteManga, MostPopularManga} from './container/TopManga'
+import {AllMangas,  LightNovel,  MostFavoriteManga, MostPopularManga} from './container/TopManga'
 import { Footer, Navbar } from './components'
 
 const App = () => {
@@ -24,6 +24,7 @@ const App = () => {
       <Route path='/all-manga' element={<AllMangas/>}/>
       <Route path='/favorite-manga' element={<MostFavoriteManga/>}/>
       <Route path='/popular-manga' element={<MostPopularManga/>}/>
+      <Route path='/novel' element={<LightNovel/>}/>
 
       <Route path='/search/:searchTerm' element={<Search/>}/>
     </Routes>

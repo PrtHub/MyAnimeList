@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
 import { useGetSearchAnimeQuery } from '../redux/animeApi';
-import { AnimeCard, Error, Loader } from '../components';
+import { AnimeCard, Error, Loader, SearchCard } from '../components';
 
 const Search = () => {
 
@@ -21,7 +21,7 @@ const Search = () => {
       <div
         className="flex flex-row flex-wrap gap-5 justify-between rounded ">
           {data?.map((anime) => (
-           <AnimeCard anime={anime}  key={anime.myanimelist_id} />         
+           <SearchCard anime={anime}  key={anime.myanimelist_id} />         
           ))}
         </div>
     </div>

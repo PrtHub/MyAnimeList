@@ -18,9 +18,14 @@ export const animeApi = createApi({
       getFavAnime: builder.query({ query: () => '/anime/top/favorite' }),
       getPopularAnime: builder.query({ query: () => '/anime/top/bypopularity' }),
       getAnimeMovie: builder.query({ query: () => '/anime/top/movie' }),
-      getSearchAnime: builder.query({ query: (searchTerm) => `/anime/search/${searchTerm}` }),
+      getSearchAnime: builder.query({ query: (searchTerm) => `/anime/search/${searchTerm}/10` }),
+
+      getAllManga: builder.query({ query: () => '/manga/top/all' }),
+      getPopManga: builder.query({ query: () => '/manga/top/bypopularity' }),
+      getFavManga: builder.query({ query: () => '/manga/top/favorite' }),
+      getLightNovel: builder.query({ query: () => '/manga/top/lightnovels' }),
     }),
 
 });
 
-export const { useGetAllAnimeQuery, useGetUpcomingAnimeQuery, useGetAiringAnimeQuery, useGetFavAnimeQuery, useGetPopularAnimeQuery, useGetAnimeMovieQuery, useGetSearchAnimeQuery } = animeApi;
+export const { useGetAllAnimeQuery, useGetUpcomingAnimeQuery, useGetAiringAnimeQuery, useGetFavAnimeQuery, useGetPopularAnimeQuery, useGetAnimeMovieQuery, useGetSearchAnimeQuery, useGetAllMangaQuery,useGetPopMangaQuery, useGetFavMangaQuery, useGetLightNovelQuery } = animeApi;

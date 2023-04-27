@@ -37,7 +37,7 @@ const Hero = () => {
             url={
               <Link
                 to="https://www.netflix.com/title/80107103"
-                className="bg-[#563bfa] px-4 py-2 rounded mt-2"
+                className="bg-[#563bfa] px-4 py-2 rounded mt-2 "
               >
                 Watch
               </Link>

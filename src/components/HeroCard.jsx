@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const HeroCard = ({img, title, data, story, url}) => {
   return (
@@ -9,7 +10,7 @@ const HeroCard = ({img, title, data, story, url}) => {
             <h1 className='text-3xl font-semibold'>{title}</h1>
             <p className='text-left '>{data}</p>
             <p className='max-w-sm text-left my-5 text-xs sm:text-base'>{story}</p>
-            <button>{url}</button>
+            <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>{url}</motion.button>
             </div>
         </div>
       </>
