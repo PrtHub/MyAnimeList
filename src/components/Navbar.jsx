@@ -2,10 +2,18 @@ import React, { useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import SearchBar from "./SearchBar";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+
 
 const Navbar = () => {
+  const loaction = useLocation();
   const [menu, setMenu] = useState(false);
+
+  const loactionPath = (route) => {
+   if(route === location.pathname) {
+    return true
+   }
+  }
 
   return (
     <>
@@ -29,7 +37,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/"
-                  className="font-sans text-2xl hover:text-gray-300 transition-all duration-200"
+                  className={`font-sans text-2xl hover:text-gray-300 transition-all duration-200 ${loactionPath("/") && "text-[#563bfa]"}`}
                 >
                   Anime
                 </Link>
@@ -37,7 +45,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/manga"
-                  className="font-sans text-2xl hover:text-gray-300 transition-all duration-200"
+                  className={`font-sans text-2xl hover:text-gray-300 transition-all duration-200 ${loactionPath("/manga") && "text-[#563bfa]"}`}
                 >
                   Manga
                 </Link>
