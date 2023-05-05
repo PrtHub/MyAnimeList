@@ -9,7 +9,7 @@ import { Footer, Navbar } from './components'
 const App = () => {
   return (
     <>
-    <div className='background w-full h-full '>
+    <div className='background m-full mx-auto h-full '>
     <Navbar/>
     <Routes>
       <Route path='/' element={<Anime/>}/>
