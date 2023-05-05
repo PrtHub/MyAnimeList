@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 const HeroCard = ({img, title, data, story, url}) => {
   return (
     <>
-        <div className='relative sm:rounded-lg'>
+        <div className='relative sm:rounded-lg w-full h-full'>
             <img src={img} alt="" className='object-cover w-full h-[400px] sm:h-[550px]'/>
             <div className='absolute bottom-12 sm:bottom-32 left-5 text-white flex flex-col items-start text'>
             <h1 className='text-3xl font-semibold'>{title}</h1>
