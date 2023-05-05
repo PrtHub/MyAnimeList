@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 
 const FavMangaCard = () => {
     const { data, isFetching, error } = useGetFavMangaQuery();
-    const FavManga = data?.slice(0,7)
+    const FavManga = data?.slice(0,14)
     if (isFetching) return <Loader title="Loading Songs..." />;
   
     if (error) return <Error />;
 
   return (
     <>
-     <div className="w-full mt-10 text flex flex-col items-start gap-5 px-6 relative ">
+     <div className="w-full mt-14 text flex flex-col items-start gap-5 px-6 relative ">
           <div className=" w-full flex items-center justify-between ">
             <h1 className="text-white text-lg sm:text-3xl font-semibold">Favorite Manga</h1>
             <button>
@@ -25,7 +25,7 @@ const FavMangaCard = () => {
             </button>
           </div>
           <div
-          className="flex flex-row flex-wrap gap-5 justify-center sm:justify-between  ">
+          className="flex flex-row flex-wrap gap-5 justify-center sm:justify-start  ">
             {FavManga?.map((anime) => (
              <AnimeCard anime={anime}  key={anime.myanimelist_id}/>         
             ))}
