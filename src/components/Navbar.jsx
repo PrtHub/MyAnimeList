@@ -54,7 +54,7 @@ const Navbar = () => {
           )}
         </div>
         <div>
-          <h1><Link to='/' className="logo text-lg sm:text-3xl font-semibold ">MyAnimeList</Link>
+          <h1><Link to='/' className="logo text-2xl sm:text-3xl font-semibold ">MyAnimeList</Link>
           </h1>
         </div>
         <div>

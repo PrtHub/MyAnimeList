@@ -1,5 +1,5 @@
 import HeroCard from "./HeroCard.jsx";
-import { Vinland, YN, DS, OP, JJKS, Musho, VE, CSM, Hyouka } from "../assets";
+import { Vinland, YN, DS, OP, JJKS, Musho, VE, CSM, Hyouka, Demon } from "../assets";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -123,7 +123,7 @@ const Hero = () => {
         </SwiperSlide>
         <SwiperSlide>
           <HeroCard
-            img={DS}
+            img={Demon}
             title="Demon Slayer"
             data="TV-Series | 2019 - "
             story="Tanjiro sets out to become a demon slayer to avenge his family and cure his sister.A family is attacked by demons and only two members survive - Tanjiro and his sister Nezuko, who is turning into a demon slowly. Tanjiro sets out to become a demon slayer to avenge his family and cure his sister."
