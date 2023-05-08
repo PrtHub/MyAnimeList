@@ -1,15 +1,22 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useGetAiringAnimeQuery } from '../../redux/animeApi';
 import { AnimeCard, Error, Loader } from '../../components';
 
 const AiringCard = () => {
 
+  const navigate = useNavigate();
   const { data, isFetching, error } = useGetAiringAnimeQuery();
   const AirAnime = data?.slice(0,14)
-  if (isFetching) return <Loader title="Loading...." />;
+  if (isFetching) return <Loader />;
 
   if (error) return <Error />;
+
+  const handleSeeMore = (e) => {
+    e.preventDefault();
+    window.scrollTo(0, 0);
+    navigate('/air-anime')
+ }
 
   return (
     <>
@@ -17,12 +24,12 @@ const AiringCard = () => {
         <div className=" w-full flex items-center justify-between ">
           <h1 className="text-white text-lg sm:text-3xl font-semibold">Airing Anime</h1>
           <button>
-            <Link
-              to="/air-anime"
+            <div
+              onClick={handleSeeMore}
               className="uppercase bg-transparent border-none outline-none text-xs sm:text-base text-[#563bfa] font-medium "
             >
               SEE MORE +
-            </Link>
+            </div>
           </button>
         </div>
         <div
