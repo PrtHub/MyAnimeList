@@ -14,10 +14,10 @@ const Movies = () => {
     <>
      <div className="w-full mt-10 text flex flex-col items-start gap-5 px-6 ">
         <div className=" w-full text-center sm:text-start ">
-          <h1 className="text-white text-lg sm:text-3xl font-semibold">Anime Movie</h1>
+          <h1 className="headerText">Anime Movie</h1>
         </div>
         <div
-        className="flex flex-row flex-wrap gap-5 justify-between rounded ">
+        className="mainWrapper ">
           {data && Array.isArray(data) ?  data?.map((anime) => (
            <AnimeCard anime={anime}  key={anime.myanimelist_id} />         
           ))

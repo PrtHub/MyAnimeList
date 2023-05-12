@@ -17,7 +17,7 @@ const AiringAnime = () => {
           <h1 className="text-white text-3xl font-semibold">Airing Anime</h1>
         </div>
         <div
-        className="flex flex-row flex-wrap gap-5 justify-center sm:justify-between rounded ">
+        className="mainWrapper">
           {data && Array.isArray(data) ? data?.map((anime) => (
            <AnimeCard anime={anime}  key={anime.myanimelist_id} />         
           ))
