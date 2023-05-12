@@ -2,14 +2,16 @@ import React from "react";
 import { useGetAllAnimeQuery } from "../../redux/animeApi";
 import { Error, Loader } from "../../components";
 import {AnimeCard} from "../../components";
-import { Link, useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+
 
 
 const AllCard = () => {
   const navigate = useNavigate();
   const { data, isFetching, error } = useGetAllAnimeQuery();
-  const AllAnime = data?.slice(0,14)
+  const AllAnime = Array.isArray(data) ? data.slice(0, 14) : [];
+
+
   if (isFetching) return <Loader />;
 
   if (error) return <Error />;

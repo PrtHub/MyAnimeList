@@ -6,7 +6,8 @@ import { Link, useNavigate } from 'react-router-dom';
 const FavMangaCard = () => {
     const navigate = useNavigate();
     const { data, isFetching, error } = useGetFavMangaQuery();
-    const FavManga = data?.slice(0,14)
+    const FavManga = Array.isArray(data) ? data.slice(0, 14) : [];
+    
     if (isFetching) return <Loader/>;
   
     if (error) return <Error />;

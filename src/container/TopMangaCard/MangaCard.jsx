@@ -9,7 +9,8 @@ import { useNavigate } from "react-router-dom";
 const MangaCard = () => {
   const navigate = useNavigate();
   const { data, isFetching, error } = useGetAllMangaQuery();
-  const AllManga = data?.slice(0,14)
+  const AllManga =Array.isArray(data) ? data.slice(0, 14) : [];
+  
   if (isFetching) return <Loader />;
 
   if (error) return <Error />;

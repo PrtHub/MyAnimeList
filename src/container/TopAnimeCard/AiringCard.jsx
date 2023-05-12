@@ -7,10 +7,12 @@ const AiringCard = () => {
 
   const navigate = useNavigate();
   const { data, isFetching, error } = useGetAiringAnimeQuery();
-  const AirAnime = data?.slice(0,14)
+  const AirAnime = Array.isArray(data) ? data.slice(0, 14) : [];
+
   if (isFetching) return <Loader />;
 
   if (error) return <Error />;
+
 
   const handleSeeMore = (e) => {
     e.preventDefault();

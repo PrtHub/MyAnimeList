@@ -9,7 +9,8 @@ import { useNavigate } from "react-router-dom";
 const LightNovelCard = () => {
   const navigate = useNavigate();
   const { data, isFetching, error } = useGetLightNovelQuery();
-  const lightNovel = data?.slice(0,14)
+  const lightNovel = Array.isArray(data) ? data.slice(0, 14) : [];
+
   if (isFetching) return <Loader/>;
 
   if (error) return <Error />;

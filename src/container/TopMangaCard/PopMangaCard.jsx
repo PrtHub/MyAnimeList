@@ -7,7 +7,8 @@ import {useNavigate } from 'react-router-dom';
 const PopMangaCard = () => {
   const navigate = useNavigate();
     const { data, isFetching, error } = useGetPopMangaQuery();
-    const PopManga = data?.slice(0,14)
+    const PopManga = Array.isArray(data) ? data.slice(0, 14) : [];
+    
     if (isFetching) return <Loader  />;
   
     if (error) return <Error />;

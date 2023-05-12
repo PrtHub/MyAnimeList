@@ -20,9 +20,11 @@ const AllMangas = () => {
         </div>
         <div
         className="flex flex-row flex-wrap gap-5 justify-center sm:justify-between  ">
-          {data?.map((anime) => (
+          {data && Array.isArray(data) ? data?.map((anime) => (
            <AnimeCard anime={anime}  key={anime.myanimelist_id}/>         
-          ))}
+          ))
+        : null
+        }
         </div>
       </div>
     </>

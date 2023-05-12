@@ -6,10 +6,12 @@ import { AnimeCard, Error, Loader } from '../../components';
 const PopularCard = () => {
   const navigate = useNavigate();
   const { data, isFetching, error } = useGetPopularAnimeQuery();
-  const PopAnime = data?.slice(0,14)
+  const PopAnime = Array.isArray(data) ? data.slice(0, 14) : [];
+
   if (isFetching) return <Loader />;
 
   if (error) return <Error />;
+  
 
   const handleSeeMore = (e) => {
     e.preventDefault();

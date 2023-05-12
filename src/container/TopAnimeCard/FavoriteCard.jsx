@@ -6,10 +6,13 @@ import { AnimeCard, Error, Loader } from '../../components';
 const FavoriteCard = () => {
   const navigate = useNavigate();
   const { data, isFetching, error } = useGetFavAnimeQuery();
-  const FavAnime = data?.slice(0,14)
+  const FavAnime = Array.isArray(data) ? data.slice(0, 14) : [];
+
   if (isFetching) return <Loader  />;
 
   if (error) return <Error />;
+
+  
 
   const handleSeeMore = (e) => {
     e.preventDefault();
