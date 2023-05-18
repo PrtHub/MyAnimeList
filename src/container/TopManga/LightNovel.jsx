@@ -14,17 +14,17 @@ const LightNovel = () => {
   return (
     <>
       <div className="w-full mt-10 text flex flex-col items-start gap-5 px-6 relative ">
-        <div className=" w-full flex items-center justify-between ">
+        <section className=" w-full flex items-center justify-between ">
           <h1 className="headerText">Light Novel</h1>
-        </div>
-        <div
+        </section>
+        <section
         className="mainWrapper ">
           {data && Array.isArray(data) ?  data?.map((anime) => (
            <AnimeCard anime={anime}  key={anime.myanimelist_id}/>         
           )) 
         : null
         }
-        </div>
+        </section>
       </div>
     </>
   );

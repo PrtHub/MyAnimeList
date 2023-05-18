@@ -22,7 +22,7 @@ const PopularCard = () => {
   return (
     <>
      <div className="w-full mt-14 text flex flex-col items-start gap-5 px-6 ">
-        <div className=" w-full flex items-center justify-between ">
+        <section className=" w-full flex items-center justify-between ">
           <h1 className="headerText">Most Popular Anime</h1>
           <button>
             <div
@@ -32,13 +32,13 @@ const PopularCard = () => {
               SEE MORE +
             </div>
           </button>
-        </div>
-        <div
+        </section>
+        <section
         className="cardWrap">
           {PopAnime?.map((anime) => (
            <AnimeCard anime={anime}  key={anime.myanimelist_id} />         
           ))}
-        </div>
+        </section>
       </div>
     </>
   )

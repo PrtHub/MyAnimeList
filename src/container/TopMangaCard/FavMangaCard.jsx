@@ -22,7 +22,7 @@ const FavMangaCard = () => {
   return (
     <>
      <div className="w-full mt-14 text flex flex-col items-start gap-5 px-6 relative ">
-          <div className=" w-full flex items-center justify-between ">
+          <section className=" w-full flex items-center justify-between ">
             <h1 className="headerText">Favorite Manga</h1>
             <button>
               <div
@@ -32,13 +32,13 @@ const FavMangaCard = () => {
                 SEE MORE +
               </div>
             </button>
-          </div>
-          <div
+          </section>
+          <section
           className="cardWrap">
             {FavManga?.map((anime) => (
              <AnimeCard anime={anime}  key={anime.myanimelist_id}/>         
             ))}
-          </div>
+          </section>
         </div>
     </>
   )

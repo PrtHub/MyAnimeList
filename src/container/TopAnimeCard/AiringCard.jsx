@@ -23,7 +23,7 @@ const AiringCard = () => {
   return (
     <>
      <div className="w-full mt-14 text flex flex-col items-start gap-5 px-6 ">
-        <div className=" w-full flex items-center justify-between ">
+        <section className=" w-full flex items-center justify-between ">
           <h1 className="headerText">Airing Anime</h1>
           <button>
             <div
@@ -33,13 +33,13 @@ const AiringCard = () => {
               SEE MORE +
             </div>
           </button>
-        </div>
-        <div
+        </section>
+        <section
         className="cardWrap">
           {AirAnime?.map((anime) => (
            <AnimeCard anime={anime}  key={anime.myanimelist_id} />         
           ))}
-        </div>
+        </section>
       </div>
     </>
   )

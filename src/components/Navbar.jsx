@@ -19,7 +19,7 @@ const Navbar = () => {
     <>
       <nav className="flex-1 flex flex-row justify-between items-center  text-white px-6 py-4 ">
         <div className="menu relative">
-          <div className="menu-button">
+          <section className="menu-button">
             {menu ? (
               <AiOutlineClose
                 className="w-[28px] h-[28px] object-contain text-white cursor-pointer"
@@ -31,7 +31,7 @@ const Navbar = () => {
                 onClick={() => setMenu(true)}
               />
             )}
-          </div>
+          </section>
           {menu && (
             <ul className="absolute top-[45px] right-[-110px] w-36 h-auto flex flex-col justify-center items-center py-6 gap-5 rounded-lg sidebar shadow-xl background z-10">
               <li>
@@ -53,13 +53,13 @@ const Navbar = () => {
             </ul>
           )}
         </div>
-        <div>
+        <section>
           <h1><Link to='/' className="logo text-2xl sm:text-3xl font-semibold ">MyAnimeList</Link>
           </h1>
-        </div>
-        <div>
+        </section>
+        <section>
           <SearchBar />
-        </div>
+        </section>
       </nav>
     </>
   );

@@ -17,14 +17,14 @@ const Footer = () => {
 
   return (
     <>
-      <div className="mt-20 flex flex-1 flex-col sm:flex-row gap-10 sm:gap-0  justify-center sm:justify-between items-center px-6 py-10  border-t-[1px] border-[#563bfa]  ">
+      <footer className="mt-20 flex flex-1 flex-col sm:flex-row gap-10 sm:gap-0  justify-center sm:justify-between items-center px-6 py-10  border-t-[1px] border-[#563bfa]  ">
         <div className="flex flex-col items-center sm:items-start gap-4">
-          <div className="flex items-center gap-4  ">
+          <section className="flex items-center gap-4  ">
             <ImYoutube className="w-5 h-5 text-[#563bfa] hover:text-white cursor-pointer" />
             <AiOutlineTwitter className="w-5 h-5 text-[#563bfa] hover:text-white cursor-pointer" />
             <FaTelegramPlane className="w-5 h-5 text-[#563bfa] hover:text-white cursor-pointer" />
             <FaFacebookF className="w-5 h-5 text-[#563bfa] hover:text-white cursor-pointer" />
-          </div>
+          </section>
           <h1>
             <Link
               to="/"
@@ -48,19 +48,19 @@ const Footer = () => {
           </form>
         </div>
         <div className="flex flex-col gap-4 text-white ">
-          <div className="flex justify-around ">
+          <section className="flex justify-around ">
             <Link to="/" className="hover:text-[#563bfa]">
               Anime
             </Link>
             <Link to="/manga" className="hover:text-[#563bfa]">
               Manga
             </Link>
-          </div>
-          <div>
+          </section>
+          <section>
             <p>2023&copy; All Right Reserved</p>
-          </div>
+          </section>
         </div>
-      </div>
+      </footer>
     </>
   );
 };

@@ -18,7 +18,7 @@ const SearchBar = () => {
     <>
       <form onSubmit={handleSubmit} autoComplete="off">
         <div className="flex flex-col justify-center items-center relative">
-            <div>
+            <section>
             {searchbar ? (
             <AiOutlineClose
               className="h-5 w-5 cursor-pointer "
@@ -30,7 +30,7 @@ const SearchBar = () => {
               onClick={() => setSearchbar(true)}
             />
           )}
-          </div>
+          </section>
 
           {searchbar && (
             <input

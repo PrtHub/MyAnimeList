@@ -12,17 +12,17 @@ const MostPopular = () => {
   return (
     <>
      <div className="w-full mt-10 text flex flex-col items-start gap-5 px-6 ">
-        <div className=" w-full text-center sm:text-start ">
+        <section className=" w-full text-center sm:text-start ">
           <h1 className="headerText">Most Popular Anime</h1>
-        </div>
-        <div
+        </section>
+        <section
         className="mainWrapper">
           {data && Array.isArray(data) ?  data?.map((anime) => (
            <AnimeCard anime={anime}  key={anime.myanimelist_id} />         
           ))
           : null
           }
-        </div>
+        </section>
       </div>
     </>
   )

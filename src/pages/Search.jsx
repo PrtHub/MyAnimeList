@@ -18,12 +18,12 @@ const Search = () => {
     <h2 className="font-bold text-3xl text-white text-left mt-4 mb-10">
         Showing results for <span className="text-[#563bfa]">{searchTerm}</span>
       </h2>
-      <div
+      <section
         className="flex flex-row flex-wrap gap-5 justify-between rounded ">
           {data?.map((anime) => (
            <SearchCard anime={anime}  key={anime.myanimelist_id} />         
           ))}
-        </div>
+        </section>
     </div>
     </>
   )
